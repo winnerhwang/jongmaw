@@ -1,0 +1,52 @@
+<!--
+  @media print  {
+    body {margin:0px;}
+    table {border:0px; padding:0px; border-spacing:0px 1px 0px 0px;}
+    .pageEject {page-break-after:always;}
+/*//    table.data tr:nth-child(10n+0) {page-break-after:always;}*/
+    .dontPrint {display: none}
+  }
+  @media screen {
+    .dontDisplay {display:none}
+  }
+    body {FONT-FAMILY:Arial,"SimHei","細明體"}
+    table.A4P       {width:780px; height:1020px;}
+    table.A4P>tbody {vertical-align:top;height:930px;}
+    table.A4L       {width:1024px; height:690px;}
+    table.A4L>tbody {vertical-align:top;height:600px;}
+    table.Letter       {width:800px; height:960px;}
+    table.Letter>tbody {vertical-align:top;height:850px;}
+    table.Letter2       {width:720px; height:430px;}
+    table.Letter2>tbody {vertical-align:top;height:320px;}
+    td.rptTitle {font-size:20px;font-weight:bold;text-align:center;letter-spacing:5px;}
+    table.head , td.head , tr.head {max-height:60px;vertical-align:top; height:60px}
+    tfoot.foot {max-height:40px;vertical-align:bottom; bottom:40px;}
+    td.rptHeadLeft   {text-align:left  ;padding:0 0 0 5px;overflow-wrap:normal;white-space: nowrap}
+    td.rptHeadMiddle {text-align:center;padding:0 5 0 5px;overflow-wrap:normal;white-space: nowrap}
+    td.rptHeadRight  {text-align:right ;padding:0 5 0 0px;overflow-wrap:normal;white-space: nowrap}
+    td.rptFootLeft   {text-align:left  ;padding:0 0 0 5px;overflow-wrap:normal;white-space: nowrap}
+    td.rptFootMiddle {text-align:center;padding:0 5 0 5px;overflow-wrap:normal;white-space: nowrap}
+    td.rptFootRight  {text-align:right ;padding:0 5 0 0px;overflow-wrap:normal;white-space: nowrap}
+    td.listarea {vertical-align:top;}
+    table.data    {vertical-align:top;table-layout:fixed;border-collapse:collapse}
+    table.data th {font-size:14px;border-style:none none solid none; }
+    table.data td {font-size:12px;border-style:none none dashed none; }
+    table.data th,table.data td {border-width:1px; border-color:#000;padding: 1px 5px 1px 5px;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+    table.data tr:nth-child(5n+1)   {background-color:#f0f0f0;}
+    table.data tr:nth-child(5n+1) td{border-style:none none solid none;}
+    table.data tr.dsum td {border-style:double none double none; border-width:3}
+    .right {text-align:right;}
+    .center {text-align:center;}
+    .font20 {font-size:20px;}
+    .font18 {font-size:18px;}
+    .font16 {font-size:16px;}
+    .font14 {font-size:14px;}
+    .font12 {font-size:12px;}
+    .font10 {font-size:10px;}
+    .font8 {font-size:8px;}
+    div.expExcel { position: fixed; right: 25px; top: 20px; padding: 10px 15px; font-size: 1.5em;
+      background: #777; color: white; cursor: pointer; z-index: 2; opacity:0.5;
+      _position: absolute; /* position fixed for IE6 */
+      _top:expression(documentElement.scrollTop+documentElement.clientHeight+25);
+    }
+/*    //div#xlsData {display:none}*/

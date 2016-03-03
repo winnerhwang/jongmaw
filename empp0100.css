@@ -1,0 +1,14 @@
+/* CSS Document */
+    div.Letter    {width:816px; height:1056px;}
+    div.Letter2   {width:816px; height:528px;}
+
+    div.topMargin {float:none; width:300px; height:10px; background-color:#f00;}
+    div.leftMargin{float:left; width:20px; height:200px; background-color:#0f0;}
+    div.horiDeli  {float:left; width:30px; height: 5px; background-color:#00f;}
+    div.vertDeli  {float:none; width:300px; height:40px; background-color:#ff0; clear:both}
+    div.label     {float:left; width:700px; height:400px; background-color:#eee; padding:0px; }
+    td.lblno   {padding:10px 10px 10px 10px; font-size:12px; text-align:right;}
+    td.lblname {padding:50px 10px  0px 10px; font-size:36px; text-align:center; letter-spacing:20px}
+    td.lblrec  {padding:0px 110px 10px 10px; font-size:16px; text-align:right; }
+    td.lbladdr {padding:50px 10px 10px 50px; font-size:20px; text-align:left; }
+

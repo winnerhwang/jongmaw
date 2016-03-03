@@ -1,0 +1,10 @@
+/* CSS Document */
+  tr.colHead {text-align:center; width:'192px';}
+  td.rowHead {}
+  td.rowData {text-align:right;}
+    table.data tr:nth-child(5n+1)   {background-color:#ffffff;}
+    table.data tr:nth-child(5n+1) td{border-style:none none dashed none;}
+    table.data tr:nth-child(5n+3)   {background-color:#f0f0f0;}
+    table.data tr:nth-child(5n+3) td{border-style:none none solid none;}
+    table.data tr.dsum td {border-style:double none double none; border-width:3}
+

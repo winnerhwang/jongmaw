@@ -1,0 +1,5 @@
+    table.data {border:solid; border-spacing:0px}
+    table.data tr {height:25px;}
+    table.data th,table.data td {border-style:solid solid none none; padding:1px 2px 1px 2px;}
+    table.data tr:nth-child(5n+1) td{border-style:solid solid solid none; padding:1px 2px 1px 2px;}
+    table.data tr.dsum td {border-style:solid solid solid none; border-width:3; padding:1px 2px 1px 2px;}

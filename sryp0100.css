@@ -1,0 +1,7 @@
+    div.Letter    {width:816px; height:1056px;}
+
+    div.topMargin {float:none; width:10px; height:20px; background-color:#f00;}
+    div.leftMargin{float:left; width:60px; height:10px; background-color:#0f0;}
+    div.horiDeli  {float:left; width:90px; height:10px; background-color:#00f;}
+    div.vertDeli  {float:none; width:10px; height:50px; background-color:#ff0; clear:both}
+    div.label     {float:left; width:320px; height:295px; background-color:#eee; padding:0px; }

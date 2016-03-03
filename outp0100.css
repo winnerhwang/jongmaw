@@ -1,0 +1,10 @@
+/* CSS Document */
+  td.rptTitle    {font-size:16px}
+  .rptHeadLeft   {font-size:14px}
+  .rptHeadMiddle {font-size:14px}
+  .rptHeadRight  {font-size:14px}
+  .rptFootLeft   {font-size:14px;border-width:1px; border-style:solid none none none;}
+  .rptFootMiddle {font-size:14px;border-width:1px; border-style:solid none none none;}
+  .rptFootRight  {font-size:14px;border-width:1px; border-style:solid none none none;}
+  table.data th,table.data td {padding: 1px 2px 1px 2px;}
+  th {font-size:14px}

@@ -1,0 +1,8 @@
+/* CSS Document */
+    table.A4P       {width: 780px; height:1020px;}
+    table.A4L       {width:1024px; height: 690px;}
+    table.Letter    {width: 800px; height: 960px;}
+
+    table.head , td.head , tr.head {max-height:50px;vertical-align:top; height:50px}
+    table.data td {font-size:14px;border-style:none none dashed none; }
+    table.data th,table.data td {border-width:1px; border-color:#000;padding: 2px 2px 1px 2px;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
