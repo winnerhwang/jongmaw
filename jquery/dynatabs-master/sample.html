@@ -1,0 +1,314 @@
+ <html>
+ <head>
+ <title>jQuery Dynamic Tabs</title>
+	<link type="text/css" rel="stylesheet" href="tabs.css"></link>
+	<script type="text/javascript" src="jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="tdi.tabs.js"></script>
+	<script type="text/javascript">
+	
+	$(document).ready(function() {
+	
+		//simple tab creation
+		$("#simpletab1").dynatabs({
+			tabBodyID : "simpletabbody1"
+		});
+		//closable tabs
+		$("#closabletab1").dynatabs({
+			tabBodyID : "closabletabbody1",
+			showCloseBtn: true
+		});
+	
+		//tabs with custom close confirmation message call backs
+		$("#closeconfirmtabs").dynatabs({
+			tabBodyID : "closeconfirmtabsbody",
+			showCloseBtn: true,
+			confirmDelete: true,
+			confirmMessage: 'Do you want to delete this tab?'
+		});
+		
+		//add ajax tabs
+		$("#addajaxtab").dynatabs({
+			tabBodyID : "addajaxtabbody",
+			showCloseBtn : true,
+			confirmDelete : true
+		});
+		
+		//add static tabs
+		$("#addstatictab").dynatabs({
+			tabBodyID : 'addstatictabbody',
+			showCloseBtn : true,
+			confirmDelete : true
+		});
+		
+		//add hidden tabs example
+		$("#adddivtab").dynatabs({
+			tabBodyID : 'adddivtabbody',
+			showCloseBtn : true,
+			confirmDelete : true
+		});
+		
+		//nested tab 1
+		$("#nestedtab1").dynatabs({
+			tabBodyID : 'nestedtabbody1',
+			showCloseBtn : true,
+			confirmDelete : true
+		});
+		//nested tab 2
+		$("#nestedtab2").dynatabs({
+			tabBodyID : 'nestedtabbody2',
+			showCloseBtn : true,
+			confirmDelete : true
+		});
+	});
+	
+	function addNewTab()
+	{
+		$.addDynaTab({
+			tabID : 'addajaxtab',
+			type : 'ajax',
+			url : 'ajaxcontent.html',
+			method : 'get',
+			dtype : 'html',
+			params : {},
+			tabTitle : 'New Ajax Tab'
+		});
+	}
+	
+	function addNewStaticTab()
+	{
+		$.addDynaTab({
+			tabID : 'addstatictab',
+			type : 'html',
+			html : '<p>This HTML content is loaded statically</p>',
+			params : {},
+			tabTitle : 'New Static Tab'
+		});
+	}
+	
+	function addNewDivTab()
+	{
+		$.addDynaTab({
+			tabID : 'adddivtab',
+			type : 'div',
+			divID : 'hdnDataTabDiv',
+			params : {},
+			tabTitle : 'New Div Tab'
+		});
+	}
+	</script>
+ </head>
+ <body>
+ 
+ <h3>Example 1 - Simple Tabs - No Fancy Stuff</h3>
+ <hr></hr>
+ 
+ <div id="simpletabs">
+ 	<!-- Tab Headers Start -->
+ 	<ul class="tabs" id="simpletab1">
+ 		<li><a href="#tabview1">Tab 1</a></li>
+ 		<li><a href="#tabview2">Tab 2</a></li>
+ 		<li><a href="#tabview3">Tab 3</a></li>
+ 	</ul>
+ 	<!-- Tab Headers End -->
+ 	<!-- Tab Body Start -->
+ 	<div class="tabcontents" id="simpletabbody1">
+ 		<div id="tabview1">
+ 			Lorem ipsum contents......
+ 		</div>
+ 		<div id="tabview2">
+ 			Some more static content...
+ 		</div>
+ 		<div id="tabview3">
+ 			A bit more...
+ 		</div>
+ 	</div>
+ 	<!-- Tab Body End --> 	
+ </div>
+ <hr></hr>
+ 
+ <h3>Example 2 - Tabs with Close Buttons</h3>
+ <hr></hr>
+ <div id="closabletabs">
+ 	<!-- Tab Headers Start -->
+ 	<ul class="tabs" id="closabletab1">
+ 		<li><a href="#tabview4">Tab 1</a></li>
+ 		<li><a href="#tabview5">Tab 2</a></li>
+ 		<li><a href="#tabview6">Tab 3</a></li>
+ 	</ul>
+ 	<!-- Tab Headers End -->
+ 	<!-- Tab Body Start -->
+ 	<div class="tabcontents" id="closabletabbody1">
+ 		<div id="tabview4">
+ 			Lorem ipsum contents......
+ 		</div>
+ 		<div id="tabview5">
+ 			Some more static content...
+ 		</div>
+ 		<div id="tabview6">
+ 			A bit more...
+ 		</div>
+ 	</div>
+ 	<!-- Tab Body End --> 	
+ </div>
+ <hr></hr>
+ 
+ <h3>Example 3 - Tabs with close confirmation & custom confirm message</h3>
+ <hr></hr>
+ <div id="closeconfirmtabsdiv">
+ 	<!-- Tab Headers Start -->
+ 	<ul class="tabs" id="closeconfirmtabs">
+ 		<li><a href="#tabview7">Tab 1</a></li>
+ 		<li><a href="#tabview8">Tab 2</a></li>
+ 		<li><a href="#tabview9">Tab 3</a></li>
+ 	</ul>
+ 	<!-- Tab Headers End -->
+ 	<!-- Tab Body Start -->
+ 	<div class="tabcontents" id="closeconfirmtabsbody">
+ 		<div id="tabview7">
+ 			Lorem ipsum contents......
+ 		</div>
+ 		<div id="tabview8">
+ 			Some more static content...
+ 		</div>
+ 		<div id="tabview9">
+ 			A bit more...
+ 		</div>
+ 	</div>
+ 	<!-- Tab Body End --> 	
+ </div>
+ 
+ <hr></hr>
+ 
+ <h3>Example 4 - Add Dynamic New Tabs Using Ajax Request</h3>
+ <hr></hr>
+ <input type="button" name="addNewAjaxTab" id="addNewAjaxTab" value="Add New Ajax Tab" onclick="javascript:addNewTab();" />
+ <br></br>
+ <div id="addajaxtabdiv">
+ 	<!-- Tab Headers Start -->
+ 	<ul class="tabs" id="addajaxtab">
+ 		<li><a href="#tabview10">Tab 1</a></li>
+ 		<li><a href="#tabview11">Tab 2</a></li>
+ 		<li><a href="#tabview12">Tab 3</a></li>
+ 	</ul>
+ 	<!-- Tab Headers End -->
+ 	<!-- Tab Body Start -->
+ 	<div class="tabcontents" id="addajaxtabbody">
+ 		<div id="tabview10">
+ 			Lorem ipsum contents......
+ 		</div>
+ 		<div id="tabview11">
+ 			Some more static content...
+ 		</div>
+ 		<div id="tabview12">
+ 			A bit more...
+ 		</div>
+ 	</div>
+ 	<!-- Tab Body End --> 	
+ </div>
+ <hr></hr>
+ 
+ <h3>Example 5 - Add Dynamic New Tabs Using Static HTML</h3>
+ <hr></hr>
+ <input type="button" name="addNewStaticTab" id="addNewStaticTab" value="Add New Static Tab" onclick="javascript:addNewStaticTab();" />
+ <br></br>
+ <div id="addstatictabdiv">
+ 	<!-- Tab Headers Start -->
+ 	<ul class="tabs" id="addstatictab">
+ 		<li><a href="#tabview13">Tab 1</a></li>
+ 		<li><a href="#tabview14">Tab 2</a></li>
+ 		<li><a href="#tabview15">Tab 3</a></li>
+ 	</ul>
+ 	<!-- Tab Headers End -->
+ 	<!-- Tab Body Start -->
+ 	<div class="tabcontents" id="addstatictabbody">
+ 		<div id="tabview13">
+ 			Lorem ipsum contents......
+ 		</div>
+ 		<div id="tabview14">
+ 			Some more static content...
+ 		</div>
+ 		<div id="tabview15">
+ 			A bit more...
+ 		</div>
+ 	</div>
+ 	<!-- Tab Body End --> 	
+ </div>
+ 
+ <hr></hr>
+ 
+ <h3>Example 6 - Add Dynamic New Tabs Using hidden div</h3>
+ <hr></hr>
+ <input type="button" name="addNewDivTab" id="addNewDivTab" value="Add New Div Tab" onclick="javascript:addNewDivTab();" />
+ <br></br>
+ <div id="adddivtabdiv">
+ 	<!-- Tab Headers Start -->
+ 	<ul class="tabs" id="adddivtab">
+ 		<li><a href="#tabview16">Tab 1</a></li>
+ 		<li><a href="#tabview17">Tab 2</a></li>
+ 		<li><a href="#tabview18">Tab 3</a></li>
+ 	</ul>
+ 	<!-- Tab Headers End -->
+ 	<!-- Tab Body Start -->
+ 	<div class="tabcontents" id="adddivtabbody">
+ 		<div id="tabview16">
+ 			Lorem ipsum contents......
+ 		</div>
+ 		<div id="tabview17">
+ 			Some more static content...
+ 		</div>
+ 		<div id="tabview18">
+ 			A bit more...
+ 		</div>
+ 	</div>
+ 	<!-- Tab Body End --> 	
+ </div>
+ <div id="hdnDataTabDiv" style="display:none;"> This is loaded from a hidden div in the html body. Div ID : hdnDataTabDiv </div> 
+ <hr></hr>
+ 
+ <h3>Example 7 - Nested Tabs</h3>
+ <hr></hr>
+ <br></br>
+ <div id="nestedtabdiv">
+ 	<!-- Tab Headers Start -->
+ 	<ul class="tabs" id="nestedtab1">
+ 		<li><a href="#tabview19">Tab 1</a></li>
+ 		<li><a href="#tabview20">Tab 2</a></li>
+ 		<li><a href="#tabview21">Tab 3</a></li>
+ 	</ul>
+ 	<!-- Tab Headers End -->
+ 	<!-- Tab Body Start -->
+ 	<div class="tabcontents" id="nestedtabbody1">
+ 		<div id="tabview19">
+ 			Nested Tabs example...
+ 			<!-- Tab Headers Start -->
+		 	<ul class="tabs" id="nestedtab2">
+ 				<li><a href="#tabview22">Nested Tab 1</a></li>
+		 		<li><a href="#tabview23">Nested Tab 2</a></li>
+ 				<li><a href="#tabview24">Nested Tab 3</a></li>
+		 	</ul>
+		 	<!-- Tab Headers End -->
+		 	<!-- Tab Body Start -->
+		 	<div class="tabcontents" id="nestedtabbody2">
+ 				<div id="tabview22">
+		 			Lorem ipsum contents......
+ 				</div>
+	 			<div id="tabview23">
+ 					Some more static content...
+		 		</div>
+ 				<div id="tabview24">
+		 			A bit more...
+ 				</div>
+		 	</div>
+		 	<!-- Tab Body End -->
+ 		</div>
+ 		<div id="tabview20">
+ 			Some more static content...
+ 		</div>
+ 		<div id="tabview21">
+ 			A bit more...
+ 		</div>
+ 	</div>
+ 	<!-- Tab Body End --> 	
+ </div>
+ </body>
+ </html>

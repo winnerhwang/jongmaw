@@ -1,0 +1,36 @@
+{
+"name": "dynatabs",
+"title": "jQuery Dynamic Tabs",
+"description": "jQuery Dynamic Tabs with close buttons and ajax adding of new tabs",
+"keywords": [
+"tabs",
+"dynamic-tabs",
+"closable-tabs",
+"ajax-new-tab"
+],
+"version": "1.0.0",
+"author": {
+"name": "Sajith Sankaranarayanan",
+"url": "https://github.com/dazzlers/dynatabs/blob/master/authors.txt"
+},
+"maintainers": [
+{
+"name": "Sajith Sankaranarayanan",
+"email": "sajith.pro@me.com",
+"url": "http://thedazzlersinc.com/"
+}
+],
+"licenses": [
+{
+"type": "MIT",
+"url": "https://github.com/dazzlers/dynatabs/blob/master/LICENSE"
+}
+],
+"bugs": "https://github.com/dazzlers/dynatabs/issues",
+"homepage": "https://github.com/dazzlers/dynatabs",
+"docs": "https://github.com/dazzlers/dynatabs",
+"download": "https://github.com/dazzlers/dynatabs",
+"dependencies": {
+"jquery": "<1.9"
+}
+}
