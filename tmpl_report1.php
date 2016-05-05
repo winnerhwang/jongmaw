@@ -122,7 +122,7 @@ foreach ($data as $r => $row ) {
   $rpt['item']['current']++;
   $html.= genReport("page-item",$rpt);
 }
-if (($rpt['item']['current']%$rpt['item']['maxRows'])>0) {
+if (($rpt['item']['current']%$rpt['item']['maxRows'])>=0) {
   $html.= genReport("page-sum",$rpt);
   $html.= genReport("page-foot",$rpt);
     if ($rpt['output']=="pdf") {
